@@ -50,16 +50,19 @@ const ServicesSection = () => {
 
                     {/* Content Container - Always visible to match standard Framer cards */}
                     <div className="absolute inset-0 flex flex-col justify-end p-6 z-10">
-                      <h4 className="text-xl font-bold text-white mb-3 tracking-wide group-hover:text-red-500 transition-colors flex items-center gap-2 drop-shadow-md">
-                        <span className="text-red-500 text-sm font-bold">{number}.</span> {item.title}
-                      </h4>
-                      <p className="text-[15px] text-gray-200 leading-relaxed mb-4 drop-shadow">
-                        {item.desc}
-                      </p>
-                      
-                      <div className="flex items-center text-red-500 font-bold text-sm uppercase tracking-wider group-hover:gap-3 transition-all duration-300 gap-2 drop-shadow-md">
-                        <span>Explore</span>
-                        <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                      <div className="flex flex-col gap-3">
+                        <h4 className="text-xl font-bold text-white tracking-wide group-hover:text-red-500 transition-colors flex items-start gap-2 drop-shadow-md min-h-[56px] line-clamp-2">
+                          <span className="text-red-500 text-sm font-bold mt-1 shrink-0">{number}.</span> 
+                          <span>{item.title}</span>
+                        </h4>
+                        <p className="text-[15px] text-gray-200 leading-relaxed drop-shadow min-h-[70px] line-clamp-3">
+                          {item.desc}
+                        </p>
+                        
+                        <div className="flex items-center text-red-500 font-bold text-sm uppercase tracking-wider group-hover:gap-3 transition-all duration-300 gap-2 drop-shadow-md mt-1">
+                          <span>Explore</span>
+                          <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                        </div>
                       </div>
                     </div>
                   </Link>
